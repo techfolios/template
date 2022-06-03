@@ -1,0 +1,36 @@
+# REQUIRED CHANGES
+# Edit next line to provide your own name.
+title: Molly Maluhia | Professional Portfolio
+# Edit next line, replacing 'techfolios' with your github username
+url: "https://techfolios.github.io"
+# Edit next line so that baseurl is "" if your repo is <username>.github.io
+baseurl: "/mockup"
+
+# OPTIONAL CHANGES
+## Specify the theme using any of the css files in css/techfolio-theme
+techfolio-theme: default.css
+## You can change the bio page title to (say) CV.
+bio-page-title: Resume
+# You can change the bio page theme to (say) bio/cv.html
+bio-theme: bio/resume.html
+# Specify the code highlight theme using any of the css files in css/rouge
+rouge-theme: github.css
+
+# DON'T CHANGE THE FOLLOWING (unless you know what you're doing)
+markdown: kramdown
+kramdown:
+  hard_wrap: false
+  input: GFM
+  syntax_highlighter: rouge
+strict_front_matter: true
+mathjax: true
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+include:
+  - .nojekyll
+  - _data
+plugins:
+  - jekyll-gist

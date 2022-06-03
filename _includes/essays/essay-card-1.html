@@ -1,0 +1,15 @@
+<div class="col-md-6 col-lg-4">
+  <div class="card mb-3">
+  <div class="card-body">
+    <h5 class="card-title">{{ include.page.title }}</h5>
+    <p class="card-text"><small class="text-muted">{{ include.page.date | date_to_string }}</small></p>
+    <p class="card-text">{{ include.page.content | markdownify | strip_html | truncatewords: 40 }}</p>
+    <p>
+      {% for label in include.page.labels %}
+      <span style="background-color: var(--tf-pill-bg)" class="badge rounded-pill">{{ label }}</span>
+      {% endfor %}
+    </p>
+    <a href="{{ site.baseurl}}{{ include.page.url }}" class="btn btn-outline-dark">See More</a>
+  </div>
+  </div>
+</div>

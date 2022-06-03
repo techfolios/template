@@ -1,0 +1,20 @@
+<div style="background-color: var(--bs-white)" class="bg-gradient py-3" id="essays">
+  <div class="container">
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <h1 class="display-4 text-start">Essays</h1>
+      </div>
+    </div>
+
+    <div class="row m-3">
+      {% assign essay_pages = site.pages | where: "type", "essay" | sort: "date" | reverse %}
+        {% for page in essay_pages %}
+          {% unless page.draft %}
+            {% include essays/essay-card-1.html page=page %}
+          {% endunless %}
+      {% endfor %}
+    </div>
+
+
+  </div>
+</div>

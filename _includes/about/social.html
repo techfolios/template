@@ -1,0 +1,6 @@
+<a href="{{ include.url }}" target="_blank">
+  <svg class="tf-social">
+    <use xlink:href="{{ '/img/bootstrap-icons.svg' | prepend: site.baseurl }}#{{- include.name -}}"/>
+  </svg>
+  <span>{{ include.label }}</span>
+</a>

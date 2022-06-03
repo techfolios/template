@@ -1,0 +1,40 @@
+<div style="background-color: var(--bs-gray-600)" class="bg-gradient py-3 py-md-4 py-lg-5">
+  <div class="container">
+    <h1 class="display-4">{{ site.title }}</h1>
+    <p class="lead">{{ site.description }}</p>
+    <hr class="my-4">
+    <p>{{ site.title }} solves the confusing task of integrating Bootstrap with Jekyll by doing the integration for you - <i>the right way</i>.</p>
+    <div class="d-grid gap-2 d-md-block">
+      <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#modal">
+        {% include icon.html name='info-circle-fill' %}
+        Learn more
+      </button>
+      <a href="https://github.com/robertlove/jekyll-bootstrap" class="btn btn-outline-dark" target="_blank">
+        {% include icon.html name='github' %}
+        View on GitHub
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modal-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal-label">Learn more</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">Want all the gory details? Head over to the <a href="https://github.com/robertlove/jekyll-bootstrap">{{ site.title }} GitHub repository</a> to get up and running in no time flat.</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">
+          {% include icon.html name='hand-thumbs-down' %}
+          No thanks
+        </button>
+        <a class="btn btn-info" href="https://github.com/robertlove/jekyll-bootstrap">
+          {% include icon.html name='github' %}
+          View on GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

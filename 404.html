@@ -1,0 +1,13 @@
+---
+title: Page not found
+description: The requested page could not be found.
+---
+
+<div class="bg-light bg-gradient py-3 py-md-4 py-lg-5">
+  <div class="container">
+    <h1 class="display-4">{{ page.title }}</h1>
+    <p class="lead">{{ page.description }}</p>
+    <hr class="my-4">
+    <a class="btn btn-outline-success" href="{{ '/' | prepend: site.baseurl }}">Home</a>
+  </div>
+</div>

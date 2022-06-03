@@ -1,0 +1,49 @@
+{%- assign image = '/img/molly-maluhia.jpeg' | prepend: site.baseurl | prepend: site.url -%}
+
+<div style="background-color: var(--tf-page-bg-color)" class="bg-gradient py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md">
+        <img src="{{ site.data.bio.basics.picture }}" class="d-block mx-auto rounded-circle">
+      </div>
+      <div class="col-md">
+        <h1 class="display-4 text-center">{{ site.data.bio.basics.name }}</h1>
+        <p class="lead text-center">{{ site.data.bio.basics.label }}</p>
+        <p class="lead">{{ site.data.bio.basics.summary }}</p>
+        <hr class="my-4">
+        <p class="lead">
+          Interests:
+          {% for interest in site.data.bio.interests %}
+          {{ interest.name }}{% if forloop.last != true %}, {% endif %}
+          {% endfor %}
+        </p>
+        <hr class="my-4">
+        <div class="row">
+
+          {% if site.data.bio.basics.website %}
+            {% capture url %}{{ site.data.bio.basics.website }}{% endcapture %}
+            <div class="col">
+              {% include about/social.html url=url name='house' %}
+            </div>
+          {% endif %}
+
+          {% if site.data.bio.basics.email %}
+            {% capture url %}mailto:{{ site.data.bio.basics.email }}{% endcapture %}
+            <div class="col">
+              {% include about/social.html url=url name='envelope' %}
+            </div>
+          {% endif %}
+
+          {% for profile in site.data.bio.basics.profiles %}
+            {% capture url %}{{ profile.url }}{% endcapture %}
+            {% capture name %}{{ profile.network | downcase }}{% endcapture %}
+            <div class="col">
+              {% include about/social.html url=url name=name %}
+            </div>
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
