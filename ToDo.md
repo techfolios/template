@@ -1,6 +1,7 @@
 ## To Do
 
 * Update documentation
+* V1 to V2 migration guide
 
 Misc:
 * generate alternative CV format
