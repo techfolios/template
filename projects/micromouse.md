@@ -10,7 +10,7 @@ labels:
   - Robotics
   - Arduino
   - C++
-summary: My team developed a robotic mouse that won first place in the 2015 UH Micromouse competition.
+summary: "My team developed a robotic mouse that won first place in the 2015 UH Micromouse competition."
 ---
 
 <div class="text-center p-4">
