@@ -2,7 +2,7 @@
 layout: project
 type: project
 image: img/vacay/vacay-square.png
-title: Vacay
+title: "Vacay"
 # All dates must be YYYY-MM-DD format!
 date: 2015-12-15
 published: true

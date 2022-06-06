@@ -2,7 +2,7 @@
 layout: project
 type: project
 image: img/micromouse/micromouse-square.jpg
-title: Micromouse
+title: "Micromouse"
 # All dates must be YYYY-MM-DD format!
 date: 2015-07-01
 published: true
