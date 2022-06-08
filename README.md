@@ -1,3 +1,3 @@
-# TechFolios Template
+# Professional Portfolio
 
-For details on how to use this template, please see https://techfolios.github.io.
+For details on this professional portfolio, please see https://techfolios.github.io.
