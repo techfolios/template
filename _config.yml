@@ -9,14 +9,9 @@ baseurl: "/template"
 # OPTIONAL CHANGES
 ## Specify the theme using any of the css files in css/techfolio-theme
 techfolio-theme: default.css
-## You can change the bio page title to (say) CV.
-bio-page-title: Resume
-# You can change the bio page theme to (say) bio/cv.html
-bio-theme: bio/resume.html
-# Specify the code highlight theme using any of the css files in css/rouge
-rouge-theme: github.css
 
 # DON'T CHANGE THE FOLLOWING (unless you know what you're doing)
+rouge-theme: github.css
 markdown: kramdown
 kramdown:
   hard_wrap: false
