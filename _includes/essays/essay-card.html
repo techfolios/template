@@ -1,9 +1,17 @@
-<div class="card mb-3">
-  <div class="card-body">
-    <h5 class="card-title">{{ include.title }}</h5>
-    <p class="card-text"><small class="text-muted">{{ include.date}}</small></p>
-    <p class="card-text">{{ include.description }}</p>
-    <a href="#" class="btn btn-outline-dark">See More</a>
+<div class="col-md-6 col-lg-4" xmlns="http://www.w3.org/1999/html">
+  <div class="card h-100">
+    <div class="card-body">
+      <h5 class="card-title">{{ include.page.title }}</h5>
+      <p class="card-text"><small class="text-muted">{{ include.page.date | date_to_string }}</small></p>
+      <p class="card-text">{{ include.page.content | markdownify | strip_html | truncatewords: 40 }}</p>
+      <p>
+        {% for label in include.page.labels %}
+        <span style="background-color: var(--tf-pill-bg)" class="badge rounded-pill">{{ label }}</span>
+        {% endfor %}
+      </p>
+    </div>
+    <div class="card-footer">
+      <div class="text-center"><a href="{% if page.essayurl %}{{ page.essayurl }}{% else %}{{ site.baseurl}}{{ include.page.url }}{% endif %}" class="btn btn-outline-dark">Read More</a></div>
+    </div>
   </div>
-
 </div>

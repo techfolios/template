@@ -9,7 +9,7 @@
         <p class="lead text-center">{{ site.data.bio.basics.label }}</p>
         <p class="lead">{{ site.data.bio.basics.summary }}</p>
         <hr class="my-4">
-        <p class="lead">
+        <p class="lead m-0">
           Interests:
           {% for interest in site.data.bio.interests %}
           {{ interest.name }}{% if forloop.last != true %}, {% endif %}
@@ -20,14 +20,14 @@
 
           {% if site.data.bio.basics.website %}
             {% capture url %}{{ site.data.bio.basics.website }}{% endcapture %}
-            <div class="col">
+            <div class="col text-center">
               {% include about/social.html url=url name='house' %}
             </div>
           {% endif %}
 
           {% if site.data.bio.basics.email %}
             {% capture url %}mailto:{{ site.data.bio.basics.email }}{% endcapture %}
-            <div class="col">
+            <div class="col text-center">
               {% include about/social.html url=url name='envelope' %}
             </div>
           {% endif %}
@@ -35,7 +35,7 @@
           {% for profile in site.data.bio.basics.profiles %}
             {% capture url %}{{ profile.url }}{% endcapture %}
             {% capture name %}{{ profile.network | downcase }}{% endcapture %}
-            <div class="col">
+            <div class="col text-center">
               {% include about/social.html url=url name=name %}
             </div>
           {% endfor %}
