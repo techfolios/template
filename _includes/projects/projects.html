@@ -12,8 +12,15 @@
         {% unless page.draft %}
           {% include projects/project-card.html page=page %}
         {% endunless %}
+        {% if forloop.index == include.limit %}
+          {% break %}
+        {% endif %}
       {% endfor %}
     </div>
+
+    {% if project_pages.size > include.limit %}
+      <p class="text-center pt-4"><a href="{{ site.baseurl}}/projects/">See all {{ project_pages.size }} projects</a></p>
+    {% endif %}
 
   </div>
 </div>
