@@ -1,7 +1,6 @@
 {%- assign url = '/' | prepend: site.baseurl | prepend: site.url -%}
 {%- assign title = site.title -%}
 {%- assign description = site.description -%}
-{%- assign image = '/img/image.jpg' | prepend: site.baseurl | prepend: site.url -%}
 
 {%- if page.url != '/' -%}
   {%- if page.url -%}
@@ -22,7 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="title" content="{{ title | xml_escape }}">
     <meta name="description" content="{{ description | xml_escape }}">
-    <meta name="image" content="{{ image }}">
+    <meta name="image" content="{{ site.data.bio.basics.picture }}">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="{{ site.title | xml_escape }}">
     <meta property="og:url" content="{{ url }}">
