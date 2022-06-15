@@ -3,8 +3,7 @@ layout: project
 type: project
 image: img/cotton/cotton-square.png
 title: "Cotton"
-# All dates must be YYYY-MM-DD format!
-date: 2014-04-12
+date: 2014
 published: true
 labels:
   - Lisp

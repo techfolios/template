@@ -3,8 +3,7 @@ layout: project
 type: project
 image: img/vacay/vacay-square.png
 title: "Vacay"
-# All dates must be YYYY-MM-DD format!
-date: 2015-12-15
+date: 2015
 published: true
 labels:
   - Javascript
