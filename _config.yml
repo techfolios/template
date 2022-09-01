@@ -8,7 +8,7 @@ baseurl: "/template"
 
 # OPTIONAL CHANGES
 ## Specify the theme using any of the css files in css/techfolio-theme
-techfolio-theme: default.css
+techfolio-theme: bitter.css
 ## Specify the formatting for triple backquote code sections.
 rouge-theme: github.css
 
