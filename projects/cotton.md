@@ -8,7 +8,7 @@ published: true
 labels:
   - Lisp
   - GitHub
-summary: "A text adventure game I developed for ICS 313."
+summary: "A text adventure game that I developed for ICS 313."
 ---
 
 <img class="img-fluid" src="../img/cotton/cotton-header.png">
