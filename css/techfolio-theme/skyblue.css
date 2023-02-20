@@ -14,6 +14,7 @@
   --bs-link-color: var(--tf-blue1);
   --tf-pill-bg: var(--tf-blue3);
   --tf-icon-fill: var(--tf-blue1);
+  --tf-icon-hover: var(--tf-blue3);
   --tf-page-bg-color: var(--bs-white);
   --tf-footer-bg-color: var(--tf-blue4);
   --tf-projects-bg-color: var(--tf-blue4);
@@ -31,6 +32,11 @@ h1,h2,h3,h4,h5 {
   height: 1.5em;
   vertical-align: -.1em;
   width: 1.5em;
+  transition: 0.2s;
+}
+
+.tf-social:hover {
+  fill: var(--tf-icon-hover);
 }
 
 a {
