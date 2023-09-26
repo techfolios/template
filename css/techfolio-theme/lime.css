@@ -1,0 +1,48 @@
+/* Lime Theme: modifies the default theme to inject a wee bit o' green in various places. */
+
+/* Use Open Sans as the default font. */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Source+Code+Pro:300,400,500,700");
+
+/* See https://getbootstrap.com/docs/5.2/customize/css-variables/#root-variables for variables to override. */
+:root {
+  --tf-green1: #136c14;
+  --tf-green2: #4FA64F;
+  --tf-green3: #85C285;
+  --tf-green4: #e0f2df;
+  --bs-font-sans-serif: "Open Sans", sans-serif;
+  --bs-link-color: var(--tf-green1);
+  --tf-pill-bg: var(--tf-green3);
+  --tf-icon-fill: var(--tf-green1);
+  --tf-icon-hover: var(--tf-green2);
+  --tf-page-bg-color: var(--bs-white);
+  --tf-footer-bg-color: var(--tf-green4);
+  --tf-projects-bg-color: var(--tf-green4);
+}
+
+h1,h2,h3,h4,h5 {
+  color: var(--tf-green1);
+}
+
+/* Format social media icons */
+.tf-social {
+  display: inline-block;
+  fill: var(--tf-green1);
+  height: 1.5em;
+  vertical-align: -.1em;
+  width: 1.5em;
+  transition: 0.2s;
+}
+
+.tf-social:hover {
+  fill: var(--tf-icon-hover);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Simplify the styling of the bottom of Essay cards. */
+.card-footer {
+  background-color: var(--bs-white);
+  border-top: none;
+}

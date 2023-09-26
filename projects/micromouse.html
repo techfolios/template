@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Micromouse | Molly Maluhia | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/kambergjohnson.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Molly Maluhia | Professional Portfolio">
+    <meta property="og:url" content="https://techfolios.github.io/template/projects/micromouse.html">
+    <meta property="og:title" content="Micromouse | Molly Maluhia | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/kambergjohnson.png">
+    <link rel="shortcut icon" href="/template/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/template/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/template/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Micromouse | Molly Maluhia | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/template/">Molly Maluhia</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/template/#projects">Projects</a>
+        <a class="nav-link" href="/template/#essays">Essays</a>
+        <a class="nav-link" href="/template/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">Micromouse</h1>
+ <div class="text-center p-4">
+  <img width="200px" src="../img/micromouse/micromouse-robot.png" class="img-thumbnail" />
+  <img width="200px" src="../img/micromouse/micromouse-robot-2.jpg" class="img-thumbnail" />
+  <img width="200px" src="../img/micromouse/micromouse-circuit.png" class="img-thumbnail" />
+</div>
+
+<p>Micromouse is an event where small robot “mice” solve a 16 x 16 maze.  Events are held worldwide.  The maze is made up of a 16 by 16 gird of cells, each 180 mm square with walls 50 mm high.  The mice are completely autonomous robots that must find their way from a predetermined starting position to the central area of the maze unaided.  The mouse will need to keep track of where it is, discover walls as it explores, map out the maze and detect when it has reached the center.  having reached the center, the mouse will typically perform additional searches of the maze until it has found the most optimal route from the start to the center.  Once the most optimal route has been determined, the mouse will run that route in the shortest possible time.</p>
+
+<p>For this project, I was the lead programmer who was responsible for programming the various capabilities of the mouse.  I started by programming the basics, such as sensor polling and motor actuation using interrupts.  From there, I then programmed the basic PD controls for the motors of the mouse.  The PD control the drive so that the mouse would stay centered while traversing the maze and keep the mouse driving straight.  I also programmed basic algorithms used to solve the maze such as a right wall hugger and a left wall hugger algorithm.  From there I worked on a flood-fill algorithm to help the mouse track where it is in the maze, and to map the route it takes.  We finished with the fastest mouse who finished the maze within our college.</p>
+
+<p>Here is some code that illustrates how we read values from the line sensors:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">byte</span> <span class="nf">ADCRead</span><span class="p">(</span><span class="n">byte</span> <span class="n">ch</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">word</span> <span class="n">value</span><span class="p">;</span>
+    <span class="n">ADC1SC1</span> <span class="o">=</span> <span class="n">ch</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">ADC1SC1_COCO</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="p">{</span>   <span class="c1">// wait until ADC conversion is completed   </span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">ADC1RL</span><span class="p">;</span>  <span class="c1">// lower 8-bit value out of 10-bit data from the ADC</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>You can learn more at the <a href="https://manoa.hawaii.edu/news/article.php?aId=2857">UH Micromouse News Announcement</a>.</p>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
