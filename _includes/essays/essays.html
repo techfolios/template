@@ -18,8 +18,15 @@
       {% endfor %}
     </div>
 
-    {% if essay_pages.size > include.limit %}
-      <p class="text-center pt-4"><a href="{{ site.baseurl}}/essays/">See all {{ essay_pages.size }} essays</a></p>
+    {% assign not_draft = 0 %}
+      {% for page in essay_pages %}
+      {% unless page.draft %}
+        {% assign not_draft = not_draft | plus: 1 %}
+      {% endunless %}
+    {% endfor %}
+
+    {% if not_draft > include.limit %}
+      <p class="text-center pt-4"><a href="{{ site.baseurl}}/essays/">See all {{ not_draft }} essays</a></p>
     {% endif %}
 
   </div>
