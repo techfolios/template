@@ -43,6 +43,16 @@ a {
   text-decoration: none;
 }
 
+@media (max-width: 500px) {
+  .navbar-brand {
+    display: none;
+  }
+
+  .navbar-brand-mobile {
+    display: inline;
+  }
+}
+
 .rounded-circle {
   border-color: var(--tf-blue1);
   border-style: solid;

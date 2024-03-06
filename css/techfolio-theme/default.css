@@ -33,6 +33,16 @@ a {
   text-decoration: none;
 }
 
+@media (max-width: 500px) {
+  .navbar-brand {
+    display: none;
+  }
+
+  .navbar-brand-mobile {
+    display: inline;
+  }
+}
+
 /* Simplify the styling of the bottom of Essay cards. */
 .card-footer {
   background-color: var(--bs-white);
