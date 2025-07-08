@@ -207,3 +207,65 @@
 .highlight {
   background-color: #f8f8f8;
 }
+
+@media (prefers-color-scheme: dark) {
+  .highlight {
+    background-color: #000000;
+  }
+
+  .highlight .gd {
+    color: #ffffff;
+    background-color: #ffdddd;
+  }
+
+  .highlight .ge {
+    color: #ffffff;
+    font-style: italic;
+  }
+
+  .highlight .gi {
+  color: #ffffff;
+  background-color: #ddffdd;
+}
+highlight .kc {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.highlight .kd {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.highlight .kn {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.highlight .kp {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.highlight .kr {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.highlight .k,
+.highlight .kv {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.highlight .ow {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.highlight .o {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+}
