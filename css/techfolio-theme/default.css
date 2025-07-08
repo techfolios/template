@@ -76,6 +76,10 @@ a {
     --bs-light-rgb: 33,37,41;
     --bs-gradient: none;
     --bs-card-bg: var(--tf-surface-bg-color);
+    --bs-badge-color: #e0e0e0;
+    
+    /* Pill (Hashtags) Background */
+    --tf-pill-bg: var(--bs-gray-900);
   }
 
   body {
